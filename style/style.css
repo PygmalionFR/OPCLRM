@@ -98,7 +98,7 @@ main .text1{
     font-size: large;
     font-weight: 600;
     align-items: center;
-    border: 3px solid #ececec;
+    border: 2px solid #ececec;
     border-left: none;
 }
 .filtre-button{
@@ -139,6 +139,11 @@ main .text1{
     display: flex;
 }
 .info-bulle i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    font-size: 13px;
     height: 20px;
     width: 20px;
     border: 1px black solid;
@@ -186,11 +191,20 @@ main .text1{
     margin-bottom: 2%;
     width: 30%;
     height: 45%;
+    box-shadow: rgb(163, 163, 163) 0.5px 0.5px 10px;
 }
 .article1 aside .vignette1 .p{
     padding-left: 5%;
     padding-top: 3%;
 
+}
+.article1 aside .vignette1 .p div{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.p div .star-color i{
+    color: #e0e0e0;
 }
 .article1 aside div img{
     object-fit: cover;
@@ -243,8 +257,14 @@ main .text1{
     display: flex;
     flex-direction: column;
 }
-.vignette2 .p1 .etoile{
+.vignette2 .p1 div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     margin-top: auto;
+}
+.p1 div .star-color i{
+    color: #e0e0e0;
 }
 .article2 div{
     padding-bottom: 5%;
@@ -266,6 +286,7 @@ main .text1{
     height: 450px;
     display: flex;
     justify-content: space-between;
+    font-weight: 550;
     
 }
 .section2 .activite .solo{
@@ -382,10 +403,11 @@ footer{
     padding-left: 0.5%;
 }
 footer div{
-    padding-top: 3%;
-    padding-right: 20%;
-    padding-left: 3%;
-    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5%;
+    width: 33.3%;
 }
 footer div h3{
     padding-bottom: 10%;
