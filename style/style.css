@@ -146,7 +146,7 @@ main .text1{
     font-size: 13px;
     height: 20px;
     width: 20px;
-    border: 1px black solid;
+    border: 1px #d4d3d3 solid;
     border-radius: 50%;
     text-align: center;
     margin-right: 5px;
@@ -163,6 +163,9 @@ main .text1{
 }
 .section1 .article1 p{
     padding-bottom: 2%;
+}
+.article1 .p0{
+    padding-top: 2%;
 }
 .article1{
     background-color: #f2f2f2;
@@ -190,20 +193,21 @@ main .text1{
     background-color: #fff;
     margin-bottom: 2%;
     width: 30%;
-    height: 45%;
-    box-shadow: rgb(163, 163, 163) 0.5px 0.5px 10px;
+    height: 50%;
+    box-shadow: rgb(146, 146, 146) 0.5px 0.5px 10px;
 }
 .article1 aside .vignette1 .p{
     padding-left: 5%;
     padding-top: 3%;
+    height: auto;
+}
 
-}
-.article1 aside .vignette1 .p div{
+.p div{
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+    margin-top: auto;
+    
 }
-.p div .star-color i{
+.p div .star-color{
     color: #e0e0e0;
 }
 .article1 aside div img{
@@ -228,6 +232,7 @@ main .text1{
 .article2 h3{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 3%;
 }
 .article2 aside{
     display: flex;
@@ -257,20 +262,20 @@ main .text1{
     display: flex;
     flex-direction: column;
 }
-.vignette2 .p1 div{
+.p1 div{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     margin-top: auto;
+    padding-bottom: 3%;
 }
 .p1 div .star-color i{
     color: #e0e0e0;
 }
-.article2 div{
-    padding-bottom: 5%;
-}
+
 .p1 i{
     color: #0065FC;
+}
+.vignette2 .p1 div .star-color{
+    color: #e0e0e0;
 }
 
         /* Activiter a marseille */
@@ -302,7 +307,8 @@ main .text1{
     border-radius: 0 0 20px 20px;
     height: 50px;
     padding-left: 5%;
-    padding-top: 5%;
+    display: flex;
+    align-items: center;
 
 }
 .section2 .activite .solo img{
@@ -329,7 +335,8 @@ main .text1{
 .section2 .activite .duo .v1 p{
     height: 50px;
     padding-left: 5%;
-    padding-top: 5%;
+    display: flex;
+    align-items: center;
 }
 .section2 .activite .duo .v1 img{
     height: calc(100% - 50px);
@@ -347,7 +354,8 @@ main .text1{
 .section2 .activite .duo .v2 p{
     height: 50px;
     padding-left: 5%;
-    padding-top: 5%;
+    display: flex;
+    align-items: center;
 }
 .section2 .activite .duo .v2 img{
     height: calc(100% - 50px);
@@ -365,7 +373,8 @@ main .text1{
 .section2 .activite .duo .v3 p{
     height: 50px;
     padding-left: 5%;
-    padding-top: 5%;
+    display: flex;
+    align-items: center;
 }
 .section2 .activite .duo .v3 img{
     height: calc(100% - 50px);
@@ -383,7 +392,8 @@ main .text1{
 .section2 .activite .duo .v4 p{
     height: 50px;
     padding-left: 5%;
-    padding-top: 5%;
+    display: flex;
+    align-items: center;
 }
 .section2 .activite .duo .v4 img{
     height: calc(100% - 50px);
@@ -415,15 +425,13 @@ footer div h3{
 footer div p{
     padding-bottom: 5%;
 }
-            /* version responsive */
+            /* ---- version responsive ---- */
 @media all and ((max-width: 992px) and (min-width: 768px)) {
     header, main{
         margin: 0;
         padding: 0;
     }
-    main{
-        margin: 3%;
-    }
+            /* Header */
     header{
         width: 100%;
         justify-content: space-between;
@@ -431,6 +439,11 @@ footer div p{
     header img{
         padding-left: 2%;
     }
+            /* main content */
+    main{
+        margin: 3%;
+    }
+            /* filtre */
     .filtre{
         display: flex;
         padding: 0;
@@ -446,6 +459,7 @@ footer div p{
     .filtre .filtre-button button{
         margin-bottom: 1%;
     }
+            /* section 2 */
     .section2 .activite{
         flex-wrap: wrap;
     }
@@ -474,7 +488,15 @@ footer div p{
         height: 200px;
         width: 45%;
     }
+    .vignette2 img{
+        max-height: 200px;
+    }
 
+    .section2{
+        padding: 2%;
+        border-radius: 24px;
+    }
+            /* section 1 */
     .section1{
         height: auto;
         flex-direction: column;
@@ -495,17 +517,8 @@ footer div p{
         max-height: 300px;
         box-shadow: rgb(172, 172, 172) 1px 1px 5px;
     }
-    .vignette2 img{
-        max-height: 200px;
-    }
-
-    .section2{
-        padding: 2%;
-        border-radius: 24px;
-    }
-
 }
-            /* vesion mobile */
+                /* ---- vesion mobile ---- */
 @media all and (max-width: 768px) {
     header, main{
         margin: 0;
@@ -519,6 +532,7 @@ footer div p{
     header img{
         height: 70px;
         width: fit-content;
+        padding-left: 42%;
     
     }
     nav{
@@ -540,18 +554,23 @@ footer div p{
     }
                 /* search bar */
     main .barre_recherche{
-        width: auto;
         margin: 3%;
     }
     .barre_recherche input{
         font-size: 13px;
         padding-left: 10px;
         border: 2px solid #F2F2F2;
-        max-width: 450px;
+        border-right: none;
+        width: calc(100% - 100px);
+        padding-top: 2%;
+    }
+    .barre_recherche input::placeholder{
+        padding-left: 3%;
     }
     .barre_recherche button{
         display: none;
     }
+
     .barre_recherche div i{
         display: flex;
         align-items: center;
@@ -563,7 +582,7 @@ footer div p{
 
                 /* filtre */
     .filtre{
-        margin: 2%;
+        margin: 5%;
     }
     .filtre p{
         font-weight: 700;
@@ -574,6 +593,9 @@ footer div p{
     }
     .filtre div button{
         margin-bottom: 2%;
+    }
+    .info-bulle{
+        padding-left: 5%;
     }
                 /* section 1 */
     .section1{
@@ -593,8 +615,11 @@ footer div p{
     }
     .article1 aside .vignette1{
         width: 100%;
-        height: 200px;
-        box-shadow: rgb(187, 187, 187) 1px 1px 15px;
+        height: 250px;
+        box-shadow: rgb(146, 146, 146) 3px 3px 15px;
+    }
+    .article1 aside .vignette1 img{
+        min-height: calc(100% - 250px);
     }
     .article1 aside .vignette1 .p{
         padding-left: 2%;
@@ -607,9 +632,10 @@ footer div p{
     }
     .article2 .vignette2{
         height: 200px;
+        box-shadow: rgb(189, 189, 189) 3px 3px 15px;
     }
     
-                /* section 2 */
+                    /* section 2 */
                 /* activiter a marseille */
     .section2{
         padding-bottom: 3%;
@@ -635,7 +661,9 @@ footer div p{
     }
     .section2 .activite .duo .v1{
         height: 200px;
-        
+    }
+    .section .activite .duo .v1 p{
+        padding-top: 3%;
     }
     .section2 .activite .duo .v2{
         height: 200px;
@@ -654,5 +682,14 @@ footer div p{
         display: flex;
         flex-direction: column;
         height: auto;
+    }
+    footer div{
+        width: 100%;
+    }
+    footer div h3{
+        padding-bottom: 3%;
+    }
+    footer div p{
+        padding-bottom: 1%;
     }
 }
